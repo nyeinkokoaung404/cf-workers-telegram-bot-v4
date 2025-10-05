@@ -1,0 +1,25 @@
+{
+	"name": "cf-workers-telegram-bot-v4",
+	"private": true,
+	"author": "codebam",
+	"license": "Apache-2.0",
+	"scripts": {
+		"build": "npm run build --workspaces",
+		"build:worker": "npm run build --workspace=packages/worker",
+		"test": "npm run test --workspaces",
+		"test:worker": "npm run test --workspace=packages/worker",
+		"test:main": "npm run test --workspace=packages/main",
+		"lint": "npm run lint --workspaces",
+		"ncu": "ncu --workspaces --root -u"
+	},
+	"workspaces": [
+		"packages/main",
+		"packages/worker"
+	],
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^8.35.0",
+		"npm-check-updates": "^18.0.1",
+		"typedoc": "^0.28.6"
+	},
+	"version": ""
+}

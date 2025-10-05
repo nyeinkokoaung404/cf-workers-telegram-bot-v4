@@ -1,0 +1,38 @@
+{
+	"name": "worker",
+	"version": "7.19.0",
+	"private": true,
+	"description": "serverless telegram bot on cf workers",
+	"main": "./dist/worker.mjs",
+	"module": "./dist/worker.mjs",
+	"type": "module",
+	"scripts": {
+		"build": "esbuild ./src/index.ts --bundle --outfile=../../dist/index.js --platform=neutral --format=esm",
+		"lint": "eslint src",
+		"test": "vitest --config vitest.config.js"
+	},
+	"author": "codebam",
+	"license": "Apache-2.0",
+	"dependencies": {
+		"@codebam/cf-workers-telegram-bot": "file:../main",
+		"marked": "^16.0.0"
+	},
+	"devDependencies": {
+		"@babel/preset-env": "^7.27.2",
+		"@cloudflare/vitest-pool-workers": "^0.8.47",
+		"@cloudflare/workers-types": "^4.20250628.0",
+		"@eslint/js": "^9.30.0",
+		"@typescript-eslint/eslint-plugin": "^8.35.0",
+		"@typescript-eslint/parser": "^8.35.0",
+		"esbuild": "^0.25.5",
+		"esbuild-plugin-babel": "^0.2.3",
+		"esbuild-plugin-glob": "^2.2.3",
+		"eslint": "^9.30.0",
+		"eslint-config-prettier": "^10.1.5",
+		"globals": "^16.2.0",
+		"prettier": "^3.6.2",
+		"typescript": "^5.8.3",
+		"typescript-eslint": "^8.35.0",
+		"vitest": "3.2.4"
+	}
+}

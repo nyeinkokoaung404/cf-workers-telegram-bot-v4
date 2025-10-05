@@ -1,0 +1,20 @@
+name = "cf-workers-telegram-bot-v4"
+main = "packages/worker/src/index.ts"
+
+workers_dev = true
+compatibility_date = "2025-06-04"
+
+[ai]
+binding = "AI"
+
+[observability.logs]
+enabled = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "llama2"
+database_id = "669d5a87-91de-4d5c-894d-f389f3605ed0"
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "share"
